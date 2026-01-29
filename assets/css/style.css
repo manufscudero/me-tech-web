@@ -1,0 +1,977 @@
+:root {
+    --azul-marino: #0c102b;
+    --lila-principal: #a29bfe;
+    --lila-oscuro: #6c5ce7;
+    --blanco-suave: #f8f9fa;
+    --verde-lima: #048300;
+    --lila-suave: #efedff;
+    --gris-claro: #a19a9a;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--blanco-suave);
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--azul-marino);
+    padding: 1rem 2rem;
+}
+
+.nav-link {
+    color: white !important;
+}
+
+.nav-link:hover {
+    color: var(--lila-principal) !important;
+}
+
+.btn-lila {
+    background-color: var(--lila-principal);
+    color: var(--azul-marino);
+    font-weight: 600;
+    border-radius: 30px;
+}
+
+.logo-navbar {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+    gap: 0;
+}
+
+@media (max-width: 768px) {
+    .logo-navbar {
+        height: 80px;
+        margin-left: 120px;
+    }
+}
+
+/* DARK MODE*/
+[data-bs-theme="dark"] .bg-white {
+    background-color: #1a1d20 !important;
+}
+
+[data-bs-theme="dark"] section#sobre-nosotros {
+    background-color: #121416 !important;
+}
+
+[data-bs-theme="dark"] .text-muted,
+[data-bs-theme="dark"] .text-white-50 {
+    color: #adb5bd !important;
+}
+
+[data-bs-theme="dark"] .card {
+    background-color: #212529;
+    border-color: #373b3e;
+    color: white;
+}
+
+/* Evitar que el botón de dark mode pierda color */
+#btn-theme:focus {
+    box-shadow: none;
+}
+
+/* --- AJUSTES FAQ MODO OSCURO --- */
+
+#faq h2 {
+    color: var(--azul-marino);
+    transition: color 0.3s ease;
+}
+
+/* Título de la sección cuando está en dark mode */
+[data-bs-theme="dark"] #faq h2 {
+    color: #ffffff !important;
+}
+
+/* Estilos del Acordeón en Dark Mode */
+[data-bs-theme="dark"] .accordion-item {
+    background-color: #2b3035 !important;
+    /* Fondo gris oscuro */
+    border-color: #495057 !important;
+}
+
+[data-bs-theme="dark"] .accordion-button {
+    background-color: #2b3035 !important;
+    color: #ffffff !important;
+}
+
+/* Color cuando el acordeón está abierto */
+[data-bs-theme="dark"] .accordion-button:not(.collapsed) {
+    background-color: rgba(162, 155, 254, 0.2) !important;
+    color: var(--lila-principal) !important;
+}
+
+/* Texto de la respuesta en Dark Mode */
+[data-bs-theme="dark"] .accordion-body {
+    color: #ced4da !important;
+}
+
+/* BOTONES */
+.btn-presupuesto {
+    background-color: var(--verde-lima);
+    color: var(--blanco-suave) !important;
+    font-weight: 700;
+    border-radius: 30px;
+    border: none;
+    padding: 10px 25px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(204, 255, 0, 0.3);
+    font-size: 0.9rem;
+    text-decoration-line: none;
+}
+
+.btn-presupuesto:hover {
+    transform: scale(1.05);
+    background-color: #1ac204;
+    /* Un verde un poco más oscuro al pasar el mouse */
+    box-shadow: 0 6px 20px rgba(204, 255, 0, 0.5);
+}
+
+.btn-lila {
+    background: linear-gradient(135deg, #6c5ce7 0%, #8e44ad 100%) !important;
+    color: #ffffff !important;
+    border: none !important;
+    font-weight: 600;
+    padding: 10px 28px;
+    border-radius: 50px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none !important;
+    /* Elimina cualquier subrayado */
+    box-shadow: 0 4px 15px rgba(108, 92, 231, 0.3);
+    cursor: pointer;
+}
+
+.btn-lila:hover {
+    background: linear-gradient(135deg, #5b4bc4 0%, #7d3ca0 100%) !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 8px 25px rgba(108, 92, 231, 0.5);
+}
+
+.btn-lila:active {
+    transform: translateY(-1px) scale(1);
+}
+
+/* AJUSTES DEL HERO CARRUSEL */
+.hero {
+    height: 50vh !important;
+    min-height: 600px !important;
+    padding: 0 !important;
+    /* Eliminamos el padding para que el carrusel sea full */
+}
+
+.hero-slide-container {
+    height: 50vh !important;
+    min-height: 600px !important;
+    background-size: cover !important;
+    background-position: 55% 80% !important;
+    position: relative !important;
+}
+
+
+/* DEGRADADO: Sólido a la izquierda, transparente a la derecha */
+.hero-slide-container::before {
+    content: "" !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: linear-gradient(90deg,
+            rgba(10, 14, 39, 1) 0%,
+            rgba(10, 14, 39, 0.9) 40%,
+            rgba(10, 14, 39, 0) 100%) !important;
+    z-index: 1 !important;
+}
+
+.hero-content {
+    position: relative !important;
+    z-index: 2 !important;
+    /* Por encima del degradado */
+}
+
+.text-lila {
+    color: var(--lila-principal);
+}
+
+/* ESTILOS DEL MODAL */
+/* Forzar el fondo del modal al azul marino de tu marca */
+.modal-custom {
+    background-color: var(--azul-marino) !important;
+    color: white !important;
+}
+
+/* Estilo para las tarjetas de opción dentro del modal */
+.bg-opcion-dark {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    /* Un gris muy oscuro casi negro */
+    border: 1px solid rgba(162, 155, 254, 0.2) !important;
+    transition: all 0.3s ease;
+}
+
+.bg-opcion-dark:hover {
+    background-color: rgba(162, 155, 254, 0.1) !important;
+    /* Brillo lila al pasar el mouse */
+    border-color: var(--lila-principal) !important;
+}
+
+/* Círculo para los iconos */
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+/* Ajuste de textos pequeños */
+.text-light-50 {
+    color: rgba(255, 255, 255, 0.6) !important;
+    font-size: 0.8rem;
+}
+
+/* Forzar color del título si Bootstrap lo pisa */
+.modal-title {
+    color: white !important;
+}
+
+/* Borde lila del modal */
+.border-lila {
+    border: 2px solid var(--lila-oscuro) !important;
+    box-shadow: 0 0 20px rgba(108, 92, 231, 0.4);
+}
+
+.bg-azul-oscuro {
+    background-color: var(--azul-marino) !important;
+}
+
+.border-lila {
+    border: 2px solid var(--lila-oscuro) !important;
+}
+
+.option-card {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.option-card:hover {
+    border-color: var(--lila-principal) !important;
+    background-color: #1a1a3d !important;
+    transform: translateY(-5px);
+}
+
+/* Estilo para Inputs del Modal */
+.modal-content {
+    background-color: #1a1a1a;
+    /* Fondo del modal oscuro */
+    border: 1px solid rgba(108, 92, 231, 0.2);
+}
+
+.form-control-dark {
+    background-color: #2d2d2d !important;
+    border: 1px solid #444 !important;
+    color: #ffffff !important;
+    /* Texto que escribe el usuario */
+    padding: 12px 15px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+/* Inputs oscuros para el Modal */
+.form-control-dark {
+    background-color: #252525 !important;
+    border: 1px solid #444 !important;
+    color: #ffffff !important;
+    border-radius: 12px !important;
+    padding: 10px 15px;
+}
+
+/* Color del Placeholder - ¡Esto es lo que buscabas! */
+.form-control-dark::placeholder {
+    color: #a0a0a0 !important;
+    /* Gris claro que resalta */
+    opacity: 1;
+}
+
+/* Efecto al seleccionar el campo */
+.form-control-dark:focus {
+    background-color: #2a2a2a !important;
+    border-color: #6c5ce7 !important;
+    /* Tu lila principal */
+    box-shadow: 0 0 0 0.25rem rgba(108, 92, 231, 0.25) !important;
+    outline: none;
+}
+
+/* Estilo del botón "Volver" para que no compita con el principal */
+.btn-outline-secondary.rounded-pill {
+    border: 1px solid #444;
+    color: #aaa;
+}
+
+.btn-outline-secondary.rounded-pill:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Colores dinámicos para la información de AnyDesk */
+.bg-lila-subtle {
+    background: rgba(157, 80, 187, 0.1);
+}
+
+/* Forzamos que el texto sea legible en ambos modos */
+.text-emphasis {
+    color: var(--gris-claro) !important;
+    opacity: 1 !important;
+}
+
+.text-description {
+    color: var(--gris-claro) !important;
+    opacity: 0.9;
+    line-height: 1.4;
+}
+
+/* Ajuste Navbar */
+.logo-navbar {
+    filter: drop-shadow(0 0 5px rgba(162, 155, 254, 0.2));
+}
+
+/*CONTENIDO*/
+.card-problema {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Efecto al pasar el mouse sobre la card */
+.card-problema:hover {
+    transform: translateY(-10px);
+    /* Se eleva un poquito */
+    box-shadow: 0 10px 25px rgba(108, 92, 231, 0.15) !important;
+    /* Sombra lila suave */
+    border: 1px solid rgba(108, 92, 231, 0.3) !important;
+}
+
+/* Estilo para el circulo del icono */
+.icon-circle-lila {
+    width: 50px;
+    height: 50px;
+    background: rgba(108, 92, 231, 0.1);
+    color: #6c5ce7;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.card-problema:hover .icon-circle-lila {
+    background: #6c5ce7;
+    color: white;
+    transform: rotate(15deg);
+    /* Pequeño giro del icono */
+}
+
+/* Color por defecto (Modo Claro) */
+.card-title-serv {
+    color: #212529;
+    /* Un gris muy oscuro, casi negro */
+    transition: color 0.3s ease;
+}
+
+/* Color para Modo Oscuro */
+[data-bs-theme="dark"] .card-title-serv {
+    color: #ffffff !important;
+}
+
+/* Efecto extra: que el título se ponga lila cuando pasas el mouse */
+.card-problema:hover .card-title-serv {
+    color: #6c5ce7;
+}
+
+/* Aseguramos que el párrafo también se lea bien en modo oscuro */
+[data-bs-theme="dark"] .card-problema .text-muted {
+    color: #b0b0b0 !important;
+}
+
+/* Estilo para los iconos de la sección elegirme */
+.icon-box-small {
+    min-width: 40px;
+    height: 40px;
+    background: rgba(162, 155, 254, 0.1);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+/* Borde lila para la imagen de "Sobre Mí" */
+.border-lila {
+    border: 1px solid var(--lila-principal);
+}
+
+/* Efecto de grises para los logos (opcional) */
+.grayscale-filter {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.grayscale-filter:hover {
+    filter: grayscale(0%);
+}
+
+/* Contenedor de las tarjetas de proceso */
+
+/*SECCIÓN PROCESO*/
+
+/* Forzar fondo oscuro si falla la clase de Bootstrap */
+.bg-azul-marino {
+    background-color: #0a0e1a !important;
+    /* Ajusta a tu azul oscuro exacto */
+}
+
+.process-card {
+    position: relative;
+    padding: 20px;
+    z-index: 1;
+}
+
+/* Forzamos que los títulos y textos de esta sección sean blancos */
+#proceso h2,
+#proceso h5,
+#proceso .process-card h5 {
+    color: #ffffff !important;
+}
+
+#proceso p,
+#proceso .text-white-50 {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Círculo con el número del paso */
+.process-number {
+    width: 35px;
+    height: 35px;
+    background-color: var(--lila-principal) !important;
+    color: #0a0e1a !important;
+    /* Color oscuro para el número */
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    box-shadow: 0 0 15px rgba(162, 155, 254, 0.4);
+}
+
+/* Iconos de proceso */
+.process-icon {
+    width: 70px;
+    height: 70px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(162, 155, 254, 0.2);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+.process-card:hover .process-icon {
+    transform: translateY(-10px);
+    border-color: var(--lila-principal);
+    background: rgba(162, 155, 254, 0.1);
+}
+
+/* Línea conectora (solo visible en pantallas grandes) */
+@media (min-width: 768px) {
+    .process-row {
+        position: relative;
+    }
+
+    .process-row::before {
+        content: '';
+        position: absolute;
+        top: 37px;
+        left: 15%;
+        right: 15%;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, rgba(162, 155, 254, 0.3), transparent);
+        z-index: 0;
+    }
+}
+
+/*Preguntas y Respuestas*/
+.accordion-button:not(.collapsed) {
+    background-color: rgba(162, 155, 254, 0.1);
+    color: var(--lila-oscuro);
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: var(--lila-principal);
+}
+
+/* Banner de Acción Final */
+#cta-final {
+    background:
+        radial-gradient(at 0% 100%, rgba(108, 92, 231, 0.4) 0, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(255, 118, 117, 0.2) 0, transparent 50%),
+        #0f0f13 !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+#cta-final h2,
+#cta-final p {
+    color: #ffffff !important;
+}
+
+#cta-final .btn-light {
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+#cta-final .btn-light:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+}
+
+#cta-final .btn-outline-light {
+    border: 2px solid #ffffff !important;
+    color: #ffffff !important;
+    transition: all 0.3s ease;
+}
+
+#cta-final .btn-outline-light:hover {
+    background-color: #ffffff !important;
+    color: #6c5ce7 !important;
+}
+
+/* Redes Sociales */
+.social-links a {
+    width: 38px;
+    height: 38px;
+    background: rgba(162, 155, 254, 0.1);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: var(--lila-oscuro);
+    transform: translateY(-3px);
+}
+
+/* Disclaimer Legal */
+.disclaimer-legal {
+    font-size: 0.7rem;
+    line-height: 1.2;
+    max-width: 400px;
+    margin-left: auto;
+}
+
+@media (max-width: 768px) {
+    .disclaimer-legal {
+        margin: 10px auto 0;
+    }
+}
+
+
+/*  SERVICIOS DETALLADOS */
+.header-servicios,
+#cta-final {
+    background-color: #0f172a;
+    position: relative;
+    overflow: hidden;
+    color: white;
+}
+
+.blob {
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    filter: blur(90px);
+    opacity: 0.35;
+    z-index: 1;
+    animation: moveBlobs 15s infinite ease-in-out;
+}
+
+.blob-1 {
+    background: #00d2ff;
+    /* Cian */
+    top: -150px;
+    right: -100px;
+}
+
+.blob-2 {
+    background: #9d50bb;
+    /* Morado */
+    bottom: -150px;
+    left: -100px;
+    animation-delay: -7s;
+}
+
+.blob-3 {
+    background: #00d2ff;
+    top: 30%;
+    left: 10%;
+    width: 300px;
+    opacity: 0.2;
+    animation-delay: -3s;
+}
+
+@keyframes moveBlobs {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    33% {
+        transform: translate(30px, -50px) scale(1.1);
+    }
+
+    66% {
+        transform: translate(-20px, 20px) scale(0.95);
+    }
+
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+}
+
+.header-separator {
+    height: 4px;
+    width: 80px;
+    background: linear-gradient(90deg, #9d50bb, #00d2ff);
+    margin-top: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 210, 255, 0.4);
+}
+
+.container.position-relative {
+    z-index: 2;
+}
+
+.icon-box {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--lila-suave);
+    border-radius: 12px;
+}
+
+.card-servicio {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-servicio:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.bg-lila-suave {
+    background-color: var(--lila-suave);
+}
+
+/* Contenedor del área de la imagen y el título */
+.servicio-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    min-height: 110px;
+}
+
+/* El contenedor que envuelve la imagen absoluta */
+.servicio-icon-wrapper {
+    flex-shrink: 0;
+    width: 150px;
+    height: 100px;
+    position: relative;
+    margin-right: 0.5rem;
+}
+
+/* La imagen 3D propiamente dicha */
+.servicio-icon-3d {
+    width: 170px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    display: block;
+}
+
+/* Ajuste fino para el título */
+.servicio-title {
+    font-weight: 700;
+    margin-bottom: 0;
+    line-height: 1.2;
+}
+
+/* Botón Específico para Consultas de WhatsApp */
+.btn-whatsapp-grad {
+    background: linear-gradient(135deg, #019214 0%, #1ac74e 100%) !important;
+    color: #ffffff !important;
+    border: none !important;
+    font-weight: 600;
+    padding: 10px 24px;
+    border-radius: 50px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2);
+    text-decoration: none;
+}
+
+.btn-whatsapp-grad:hover {
+    background: linear-gradient(135deg, #01da0c 0%, #3fdd30 100%) !important;
+    color: #ffffff !important;
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(18, 140, 126, 0.4);
+}
+
+.btn-whatsapp-grad:active {
+    transform: translateY(0) scale(0.98);
+}
+
+/* Badge de Precio con Degradado Naranja */
+.badge-precio-pro {
+    background: linear-gradient(135deg, #6c5ce7 0%, #8e44ad 100%) !important;
+    color: #ffffff !important;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 8px 16px;
+    border-radius: 50px;
+    border: none;
+    box-shadow: 0 4px 10px rgba(255, 118, 117, 0.2);
+    display: inline-block;
+}
+
+/* Ajuste para el Modo Oscuro para que no sea tan brillante */
+[data-bs-theme="dark"] .badge-precio-pro {
+    background: linear-gradient(135deg, #9111fa 0%, #1795fc 100%) !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Ajuste específico para el Badge de precio en modo Light */
+.bg-lila-suave {
+    background-color: #efedff !important;
+    color: var(--lila-principal) !important;
+    font-weight: 600;
+}
+
+/* Ajuste para el Badge de precio en modo DARK */
+[data-bs-theme="dark"] .bg-lila-suave {
+    background-color: rgba(108, 92, 231, 0.2) !important;
+    color: #a29bfe !important;
+    /* Un lila más claro para que resalte en el negro */
+}
+
+/* Adaptación para Dark Mode */
+[data-bs-theme="dark"] .card-servicio {
+    background-color: #454c53;
+}
+
+[data-bs-theme="dark"] .bg-lila-suave {
+    background-color: rgba(108, 92, 231, 0.2);
+}
+
+/*FOOTER*/
+.footer-me {
+    background-color: var(--azul-marino);
+    border-top: 3px solid var(--lila-oscuro);
+}
+
+.logo-footer {
+    height: 60px;
+    width: auto;
+    filter: brightness(1.2);
+}
+
+.text-lila {
+    color: var(--lila-principal) !important;
+}
+
+/* Enlaces del Footer */
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--lila-principal);
+    padding-left: 8px;
+}
+
+/* CONTACTO */
+/* 1. Base para los iconos */
+.icon-only-contact {
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    color: var(--lila-principal);
+    /* Color por defecto para los demás */
+}
+
+/* 2. Color inicial de WhatsApp */
+.card-whatsapp .icon-only-contact {
+    color: #25D366;
+}
+
+/* 3. Estilo base de los Cards de contacto */
+.contact-card-info {
+    color: var(--azul-marino);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(162, 155, 254, 0.1);
+    background-color: var(--bs-tertiary-bg);
+    /* Adaptable automáticamente */
+}
+
+/* 4. Efecto HOVER General (No WhatsApp) */
+.contact-card-info:hover:not(.card-whatsapp) {
+    border-color: var(--lila-principal);
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+
+/* 5. Efecto HOVER de WhatsApp (Fondo verde y textos blancos) */
+.card-whatsapp:hover {
+    background-color: #25D366 !important;
+    border-color: #25D366 !important;
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+
+/* Forzamos que TODO dentro del card de WhatsApp sea blanco en hover */
+.card-whatsapp:hover .icon-only-contact,
+.card-whatsapp:hover .text-emphasis-contact,
+.card-whatsapp:hover .text-description-contact,
+.card-whatsapp:hover small {
+    color: #ffffff !important;
+    opacity: 1 !important;
+}
+
+/* 6. Forzar legibilidad base (Fuera de hover) */
+.text-emphasis-contact {
+    color: var(--bs-heading-color);
+    /* Sin !important aquí para permitir el hover */
+}
+
+[data-bs-theme="dark"] .text-emphasis-contact {
+    color: var(--blanco-suave);
+}
+
+.text-description-contact {
+    color: var(--bs-body-color);
+    opacity: 0.85;
+}
+
+/* 7. Ajustes por Tema (Backgrounds) */
+[data-bs-theme="dark"] .contact-card-info {
+    background-color: #1a1d24;
+}
+
+[data-bs-theme="light"] .contact-card-info {
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* 8. Responsive */
+@media (max-width: 991px) {
+    h1.fw-bold {
+        font-size: 1.8rem;
+        margin-top: 1rem;
+    }
+
+    .contact-details-wrapper {
+        margin-top: 2rem;
+    }
+}
+
+/* --- ESTILOS ESPECÍFICOS PARA UBICACIÓN --- */
+
+/* Color inicial del icono (Turquesa) */
+.card-ubicacion .icon-only-contact {
+    color: #0dcaf0;
+}
+
+/* Efecto HOVER para la tarjeta de Ubicación */
+.card-ubicacion:hover {
+    background-color: #0dcaf0 !important;
+    border-color: #0dcaf0 !important;
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+
+/* Cambia textos, iconos y el "small" a blanco en el hover de Ubicación */
+.card-ubicacion:hover .icon-only-contact,
+.card-ubicacion:hover .text-emphasis-contact,
+.card-ubicacion:hover .text-description-contact,
+.card-ubicacion:hover .small-text-info {
+    color: #ffffff !important;
+    opacity: 1 !important;
+}
+
+/* Asegurar que el texto lila de (Cita previa) también cambie */
+.small-text-info {
+    transition: color 0.3s ease;
+}
+
+.social-contact-link {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: var(--bs-tertiary-bg);
+    color: var(--lila-principal);
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(162, 155, 254, 0.1);
+    text-decoration: none;
+}
+
+/* Hover Instagram */
+.ig-color:hover {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%) !important;
+    color: white !important;
+    border-color: transparent;
+    transform: translateY(-3px);
+}
+
+/* Hover Facebook */
+.fb-color:hover {
+    background-color: #1877F2 !important;
+    color: white !important;
+    border-color: transparent;
+    transform: translateY(-3px);
+}
