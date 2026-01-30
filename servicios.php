@@ -26,7 +26,7 @@
                             <img src="assets/img/servicios/notebook.png" alt="NB Convencional" class="servicio-icon-3d">
                         </div>
                         <div class="flex-grow-1">
-                            <h4 class="servicio-title">Mantenimiento preventivo Notebook Convencional</h4>
+                            <h4 class="servicio-title">Mantenimiento Preventivo Notebook Convencional</h4>
                         </div>
                     </div>
                     <p class="text-muted mb-4">Limpieza interna y externa completa, cambio de pasta térmica, revisión general de componentes.</p>
@@ -46,7 +46,7 @@
                             <img src="assets/img/servicios/notebook_gamer.png" alt="NB Gamer" class="servicio-icon-3d">
                         </div>
                         <div class="flex-grow-1">
-                            <h4 class="servicio-title">Mantenimiento preventivo Notebook Gamer</h4>
+                            <h4 class="servicio-title">Mantenimiento Preventivo Notebook Gamer</h4>
                         </div>
                     </div>
                     <p class="text-muted mb-4">Limpieza general, cambio de pasta térmica de alto rendimiento, lubricación de ventiladores y revisión de refrigeración.</p>
@@ -66,7 +66,7 @@
                             <img src="assets/img/servicios/pc_escritorio.png" alt="PC" class="servicio-icon-3d">
                         </div>
                         <div class="flex-grow-1">
-                            <h4 class="servicio-title">Mantenimiento preventivo PC Escritorio</h4>
+                            <h4 class="servicio-title">Mantenimiento Preventivo PC Escritorio</h4>
                         </div>
                     </div>
                     <p class="text-muted mb-4">Limpieza interna y externa completa, cambio de pasta térmica al procesador, revisión general de componentes.</p>
@@ -86,7 +86,7 @@
                             <img src="assets/img/servicios/gpu.png" alt="GPU" class="servicio-icon-3d">
                         </div>
                         <div class="flex-grow-1">
-                            <h4 class="servicio-title">Mantenimiento preventivo Tarjeta Gráfica</h4>
+                            <h4 class="servicio-title">Mantenimiento Preventivo Tarjeta Gráfica</h4>
                         </div>
                     </div>
                     <p class="text-muted mb-4">Limpieza general, cambio de pasta térmica de alto rendimiento y lubricación de ventiladores.</p>
@@ -206,7 +206,7 @@
                             <img src="assets/img/servicios/teclado.png" alt="Teclado" class="servicio-icon-3d">
                         </div>
                         <div class="flex-grow-1">
-                            <h4 class="servicio-title">Limpieza de teclado</h4>
+                            <h4 class="servicio-title">Limpieza de Teclado</h4>
                         </div>
                     </div>
                     <p class="text-muted mb-4">Eliminación de suciedad profunda, restos de comida, desinfección y sanitización completa.</p>

@@ -7,6 +7,26 @@
     --lila-suave: #efedff;
     --gris-claro: #a19a9a;
 }
+/* Poppins Regular */
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/poppins/Poppins-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Poppins Bold */
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/poppins/Poppins-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Aplicar a toda la web */
+body {
+    font-family: 'Poppins', sans-serif;
+}
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -14,40 +34,94 @@ body {
 }
 
 /* Navbar */
+/* --- NAVBAR BASE --- */
 .navbar {
     background-color: var(--azul-marino);
-    padding: 1rem 2rem;
+    padding: 0.8rem 2rem; /* Reduje un poco el padding vertical para que no ocupe demasiada pantalla */
+    transition: all 0.3s ease;
 }
 
+.logo-navbar {
+    height: 70px; /* Un tamaño un poco más estándar para que el nav no sea gigante */
+    width: auto;
+    object-fit: contain;
+}
+
+/* --- ENLACES Y ANIMACIÓN DE SUBRAYADO --- */
 .nav-link {
+    color: white !important;
+    font-weight: 500;
+    position: relative;
+    margin: 0 10px; /* Espaciado entre links */
+    padding-bottom: 5px !important;
+    transition: color 0.3s ease;
+}
+
+/* El "fantasma" del subrayado (lo que se va a expandir) */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background: linear-gradient(90deg, #00d2ff, #9d50bb);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+/* Estado Hover: El link cambia a lila y el subrayado se expande */
+.nav-link:hover {
     color: white !important;
 }
 
-.nav-link:hover {
-    color: var(--lila-principal) !important;
+.nav-link:hover::after {
+    width: 100%;
 }
 
+/* --- ESTADO ACTIVO (Página actual) --- */
+/* Esta clase la pondremos con el código PHP que vimos antes */
+.nav-link.active {
+    color: white !important;
+    font-weight: 700;
+}
+
+.nav-link.active::after {
+    width: 100%; /* El subrayado se queda fijo en la página activa */
+}
+@media (max-width: 991px){
+    .nav-link.active::after {
+    width: 30%;
+}
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 991px) {
+    .navbar {
+        padding: 1rem;
+    }
+
+    .logo-navbar {
+        height: 60px;
+        margin-left: 0; /* Quitamos el margin-left que tenías para centrar mejor en móviles */
+    }
+
+    /* En móviles, centramos el texto del menú desplegable */
+    .navbar-nav {
+        text-align: center;
+        padding: 1rem 0;
+    }
+    
+    .nav-link::after {
+        left: 50%; /* Mantiene el subrayado centrado en móvil */
+    }
+}
 .btn-lila {
     background-color: var(--lila-principal);
     color: var(--azul-marino);
     font-weight: 600;
     border-radius: 30px;
 }
-
-.logo-navbar {
-    height: 80px;
-    width: auto;
-    object-fit: contain;
-    gap: 0;
-}
-
-@media (max-width: 768px) {
-    .logo-navbar {
-        height: 80px;
-        margin-left: 120px;
-    }
-}
-
 /* DARK MODE*/
 [data-bs-theme="dark"] .bg-white {
     background-color: #1a1d20 !important;
@@ -199,6 +273,40 @@ body {
 
 .text-lila {
     color: var(--lila-principal);
+}
+/* --- AJUSTE TITULOS HERO RESPONSIVE --- */
+
+/* En tablets y móviles */
+@media (max-width: 991.98px) {
+    .hero-content h1.display-4 {
+        /* Forzamos un tamaño mayor al estándar de Bootstrap */
+        font-size: calc(1.8rem + 3vw) !important; 
+        line-height: 1.1;
+        margin-bottom: 1rem !important;
+    }
+    
+    .hero-content p.lead {
+        font-size: 1.1rem;
+        margin-bottom: 2rem !important;
+    }
+}
+
+/* En celulares pequeños (iPhone, Samsung base, etc.) */
+@media (max-width: 575.98px) {
+    .hero-content h1.display-4 {
+        font-size: 2.2rem !important; /* Tamaño sólido para pantallas pequeñas */
+        text-align: center;
+    }
+    
+    .hero-content p.lead {
+        text-align: center;
+        font-size: 1rem;
+    }
+    
+    /* Centramos los botones en móvil para que se vea más equilibrado */
+    .hero-content .d-flex {
+        justify-content: center;
+    }
 }
 
 /* ESTILOS DEL MODAL */
@@ -511,6 +619,68 @@ body {
         z-index: 0;
     }
 }
+/* --- ESTILOS TESTIMONIOS --- */
+
+.testimonial-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+/* --- AJUSTES ESPECÍFICOS DARK MODE --- */
+[data-bs-theme="dark"] .testimonial-card {
+    background-color: #2b3035 !important; /* Gris oscuro para el card */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4) !important;
+}
+
+[data-bs-theme="dark"] .bg-lila-subtle {
+    background-color: rgba(162, 155, 254, 0.15) !important;
+}
+
+[data-bs-theme="dark"] .bg-info-subtle {
+    background-color: rgba(13, 202, 240, 0.15) !important;
+}
+
+/* Opcional: Para que la sección no sea un negro total sino un gris profundo */
+[data-bs-theme="dark"] #testimonios {
+    background-color: #212529 !important;
+}
+
+/* Círculo para la inicial del nombre (Avatar) */
+.avatar-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+/* Espaciado de letras para el subtítulo pequeño */
+.ls-2 {
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+}
+
+/* Ajuste de comillas */
+.fa-quote-left {
+    opacity: 0.3;
+}
+/* Estilo para el cargo/profesión */
+.role-text {
+    font-size: 0.85rem;
+    display: block; /* Asegura que vaya debajo del nombre */
+    opacity: 0.8;
+}
+
+/* Asegurar que el card ocupe todo el alto y el contenido se distribuya bien */
+.testimonial-card .card-body {
+    display: flex;
+    flex-direction: column;
+}
 
 /*Preguntas y Respuestas*/
 .accordion-button:not(.collapsed) {
@@ -659,7 +829,7 @@ body {
 .header-separator {
     height: 4px;
     width: 80px;
-    background: linear-gradient(90deg, #9d50bb, #00d2ff);
+    background: linear-gradient(90deg, #00d2ff, #9d50bb);
     margin-top: 25px;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 210, 255, 0.4);
@@ -812,6 +982,54 @@ body {
 .text-lila {
     color: var(--lila-principal) !important;
 }
+/* Estilos Botón Flotante */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    z-index: 1000; /* Asegura que esté por encima de todo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    background-color: #128c7e;
+    color: #FFF;
+    transform: scale(1.1); /* Efecto de crecimiento al pasar el mouse */
+}
+
+/* Animación de entrada o pulso (Opcional) */
+.whatsapp-float {
+    animation: pulse-whatsapp 2s infinite;
+}
+
+@keyframes pulse-whatsapp {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+/* Ajuste para móviles */
+@media screen and (max-width: 768px) {
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 25px;
+    }
+}
 
 /* Enlaces del Footer */
 .footer-links li {
@@ -843,7 +1061,7 @@ body {
 
 /* 2. Color inicial de WhatsApp */
 .card-whatsapp .icon-only-contact {
-    color: #25D366;
+    color: #2fb606;
 }
 
 /* 3. Estilo base de los Cards de contacto */
@@ -852,7 +1070,7 @@ body {
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     border: 1px solid rgba(162, 155, 254, 0.1);
     background-color: var(--bs-tertiary-bg);
-    /* Adaptable automáticamente */
+
 }
 
 /* 4. Efecto HOVER General (No WhatsApp) */
@@ -920,7 +1138,7 @@ body {
 
 /* Color inicial del icono (Turquesa) */
 .card-ubicacion .icon-only-contact {
-    color: #0dcaf0;
+    color: #57c0e0;
 }
 
 /* Efecto HOVER para la tarjeta de Ubicación */

@@ -38,7 +38,7 @@
                                 <textarea name="mensaje" class="form-control" rows="5" placeholder="Cuéntame qué problema tiene tu equipo o qué servicio necesitas..." required></textarea>
                             </div>
                             <div class="col-12 mt-4">
-                                <button type="submit" class="btn-whatsapp-grad w-100 py-3">
+                                <button type="submit" class="btn-lila w-100 py-3">
                                     <i class="fas fa-paper-plane me-2"></i> ENVIAR SOLICITUD
                                 </button>
                             </div>

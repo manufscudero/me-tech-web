@@ -43,6 +43,9 @@
             </div>
         </div>
     </div>
+    <a href="https://wa.me/595984608269" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-whatsapp my-float"></i>
+</a>
 </footer>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>

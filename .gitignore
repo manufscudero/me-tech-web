@@ -1,0 +1,10 @@
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Configuración de editores
+.vscode/
+.idea/
+
+# Si llegas a tener una carpeta de dependencias pesadas
+node_modules/

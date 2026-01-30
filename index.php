@@ -11,7 +11,7 @@
                             <p class="lead mb-5 text-white-50">Especialistas en Hardware y micro-soldadura. Soporte técnico rápido para hogares y empresas con garantía escrita.</p>
                             <div class="d-flex gap-3 flex-wrap">
                                 <a href="#" class="btn-lila" data-bs-toggle="modal" data-bs-target="#modalSoporte">
-                                    <i class="fas fa-headset me-2"></i> SOPORTE TÉCNICO
+                                    <i class="fas fa-tools me-2"></i> SOLICITAR ASISTENCIA
                                 </a>
                                 <a href="/servicios.php" class="btn btn-outline-light btn-lg rounded-pill">Nuestros Servicios</a>
                             </div>
@@ -309,6 +309,80 @@
         </div>
     </div>
 </section>
+</section>
+<section class="py-5 bg-body-tertiary position-relative" id="testimonios">
+    <div class="container py-4">
+
+        <div class="text-center mb-5">
+            <h6 class="text-lila fw-bold text-uppercase ls-2">Opiniones Reales</h6>
+            <h2 class="fw-bold display-6">Lo que dicen mis <span class="text-lila">clientes</span></h2>
+            <p class="text-body-secondary mx-auto" style="max-width: 600px;">
+                La confianza se gana con resultados. Aquí algunos profesionales que confían sus herramientas de trabajo en mí.
+            </p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm rounded-4 testimonial-card p-4 bg-body">
+                    <div class="card-body d-flex flex-column">
+                        <div class="mb-4 text-lila opacity-50">
+                            <i class="fas fa-quote-left fa-2x"></i>
+                        </div>
+                        <p class="card-text text-body-secondary mb-4">
+                            "Mi laptop estaba lentísima y pensaba comprar una nueva. Me recomendó un cambio a SSD y ahora vuela para mis programas de edición."
+                        </p>
+                        <div class="d-flex align-items-center mt-auto">
+                            <div class="avatar-circle bg-lila-subtle text-lila fw-bold me-3">S</div>
+                            <div>
+                                <h6 class="mb-0 fw-bold text-body">Sol M. Blanc</h6>
+                                <small class="text-body-secondary fw-medium role-text">Licenciada en Hotelería y Turismo</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm rounded-4 testimonial-card p-4 bg-body">
+                    <div class="card-body d-flex flex-column">
+                        <div class="mb-4 text-lila opacity-50">
+                            <i class="fas fa-quote-left fa-2x"></i>
+                        </div>
+                        <p class="card-text text-body-secondary mb-4">
+                            "Excelente servicio de soporte remoto. Me solucionó un problema de configuración de la firma digital sin moverme de casa."
+                        </p>
+                        <div class="d-flex align-items-center mt-auto">
+                            <div class="avatar-circle bg-info-subtle text-info fw-bold me-3">R</div>
+                            <div>
+                                <h6 class="mb-0 fw-bold text-body">Roberto Méndez</h6>
+                                <small class="text-body-secondary fw-medium role-text">Contador Público</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm rounded-4 testimonial-card p-4 bg-body">
+                    <div class="card-body d-flex flex-column">
+                        <div class="mb-4 text-lila opacity-50">
+                            <i class="fas fa-quote-left fa-2x"></i>
+                        </div>
+                        <p class="card-text text-body-secondary mb-4">
+                            "Llevé mi PC para un mantenimiento general y gestión de cables. Bajaron las temperaturas y ahora rinde mucho mejor."
+                        </p>
+                        <div class="d-flex align-items-center mt-auto">
+                            <div class="avatar-circle bg-lila-subtle text-lila fw-bold me-3">D</div>
+                            <div>
+                                <h6 class="mb-0 fw-bold text-body">David Torres</h6>
+                                <small class="text-body-secondary fw-medium role-text">Estudiante de Arquitectura</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 <section id="faq" class="py-5 bg-body-tertiary">
     <div class="container py-lg-4">
