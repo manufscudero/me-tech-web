@@ -34,15 +34,14 @@ body {
 }
 
 /* Navbar */
-/* --- NAVBAR BASE --- */
 .navbar {
     background-color: var(--azul-marino);
-    padding: 0.8rem 2rem; /* Reduje un poco el padding vertical para que no ocupe demasiada pantalla */
+    padding: 0.8rem 2rem;
     transition: all 0.3s ease;
 }
 
 .logo-navbar {
-    height: 70px; /* Un tamaño un poco más estándar para que el nav no sea gigante */
+    height: 70px;
     width: auto;
     object-fit: contain;
 }
@@ -57,7 +56,7 @@ body {
     transition: color 0.3s ease;
 }
 
-/* El "fantasma" del subrayado (lo que se va a expandir) */
+/* Subrayado del navbar*/
 .nav-link::after {
     content: '';
     position: absolute;
@@ -70,7 +69,7 @@ body {
     transform: translateX(-50%);
 }
 
-/* Estado Hover: El link cambia a lila y el subrayado se expande */
+/* Estado Hover: */
 .nav-link:hover {
     color: white !important;
 }
@@ -79,15 +78,15 @@ body {
     width: 100%;
 }
 
-/* --- ESTADO ACTIVO (Página actual) --- */
-/* Esta clase la pondremos con el código PHP que vimos antes */
+/* ESTADO ACTIVO (Página actual) */
+
 .nav-link.active {
     color: white !important;
     font-weight: 700;
 }
 
 .nav-link.active::after {
-    width: 100%; /* El subrayado se queda fijo en la página activa */
+    width: 100%; 
 }
 @media (max-width: 991px){
     .nav-link.active::after {
@@ -95,7 +94,7 @@ body {
 }
 }
 
-/* --- RESPONSIVE --- */
+/* Navegación Responsive  */
 @media (max-width: 991px) {
     .navbar {
         padding: 1rem;
@@ -103,25 +102,20 @@ body {
 
     .logo-navbar {
         height: 60px;
-        margin-left: 0; /* Quitamos el margin-left que tenías para centrar mejor en móviles */
+        margin-left: 0;
     }
 
-    /* En móviles, centramos el texto del menú desplegable */
+
     .navbar-nav {
         text-align: center;
         padding: 1rem 0;
     }
     
     .nav-link::after {
-        left: 50%; /* Mantiene el subrayado centrado en móvil */
+        left: 50%; 
     }
 }
-.btn-lila {
-    background-color: var(--lila-principal);
-    color: var(--azul-marino);
-    font-weight: 600;
-    border-radius: 30px;
-}
+
 /* DARK MODE*/
 [data-bs-theme="dark"] .bg-white {
     background-color: #1a1d20 !important;
@@ -200,7 +194,6 @@ body {
 .btn-presupuesto:hover {
     transform: scale(1.05);
     background-color: #1ac204;
-    /* Un verde un poco más oscuro al pasar el mouse */
     box-shadow: 0 6px 20px rgba(204, 255, 0, 0.5);
 }
 
@@ -216,7 +209,6 @@ body {
     align-items: center;
     justify-content: center;
     text-decoration: none !important;
-    /* Elimina cualquier subrayado */
     box-shadow: 0 4px 15px rgba(108, 92, 231, 0.3);
     cursor: pointer;
 }
@@ -319,7 +311,6 @@ body {
 /* Estilo para las tarjetas de opción dentro del modal */
 .bg-opcion-dark {
     background-color: rgba(255, 255, 255, 0.05) !important;
-    /* Un gris muy oscuro casi negro */
     border: 1px solid rgba(162, 155, 254, 0.2) !important;
     transition: all 0.3s ease;
 }
@@ -537,8 +528,6 @@ body {
 .grayscale-filter:hover {
     filter: grayscale(0%);
 }
-
-/* Contenedor de las tarjetas de proceso */
 
 /*SECCIÓN PROCESO*/
 
