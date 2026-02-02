@@ -1,4 +1,70 @@
-<?php include 'includes/header.php'?>
+<?php include 'includes/header.php' ?>
 
+<section class="hero-esencia py-5 bg-dark text-white text-center position-relative overflow-hidden">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
 
-<?php include 'includes/footer.php'?>
+    <div class="container py-5 position-relative" style="z-index: 2;">
+        <h6 class="text-lila fw-bold text-uppercase mb-2 tracking-wider">Nuestra Esencia</h6>
+        <h1 class="display-4 fw-bold mb-4">Un equipo pequeño haciendo <span class="text-lila">cosas extraordinarias</span></h1>
+        <p class="lead text-light-50 mx-auto" style="max-width: 750px;">
+            ME-Tech nació con el objetivo de ofrecer soluciones informáticas eficientes, basadas en la experiencia, la responsabilidad y el trato cercano. Detrás del servicio hay técnicos comprometidos con hacer las cosas bien, priorizando siempre la transparencia y la calidad en cada trabajo.
+        </p>
+    </div>
+</section>
+
+<section class="py-5 bg-adaptive transition-bg position-relative">
+    <div class="container py-4">
+        <div class="text-center mb-5">
+            <h6 class="text-lila fw-bold text-uppercase">Nuestros Valores</h6>
+            <h2 class="fw-bold display-5 text-adaptive">El código que nos define</h2>
+            <div class="header-separator mx-auto mt-3"></div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="card-valor p-4 h-100 text-center rounded-4">
+                    <div class="valor-icon mb-3">
+                        <i class="fas fa-handshake text-lila fs-3"></i>
+                    </div>
+                    <h5 class="fw-bold text-adaptive">Honestidad</h5>
+                    <p class="small text-muted mb-0">Priorizamos la transparencia. Si algo no necesita reparación o el costo no vale la pena, te lo diremos.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="card-valor p-4 h-100 text-center rounded-4">
+                    <div class="valor-icon mb-3">
+                        <i class="fas fa-user-shield text-lila fs-3"></i>
+                    </div>
+                    <h5 class="fw-bold text-adaptive">Profesionalismo</h5>
+                    <p class="small text-muted mb-0">Tratamos cada dispositivo con el máximo cuidado técnico, utilizando herramientas de precisión.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="card-valor p-4 h-100 text-center rounded-4">
+                    <div class="valor-icon mb-3">
+                        <i class="fas fa-heart-pulse text-lila fs-3"></i>
+                    </div>
+                    <h5 class="fw-bold text-adaptive">Compromiso</h5>
+                    <p class="small text-muted mb-0">No descansamos hasta encontrar la raíz del problema. Tu satisfacción es nuestra meta.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="card-valor p-4 h-100 text-center rounded-4">
+                    <div class="valor-icon mb-3">
+                        <i class="fas fa-lightbulb text-lila fs-3"></i>
+                    </div>
+                    <h5 class="fw-bold text-adaptive">Innovación</h5>
+                    <p class="small text-muted mb-0">Nos mantenemos en constante aprendizaje de las nuevas tecnologías y arquitecturas.</p>
+                </div>
+            </div>
+        </div>
+        <a href="/servicios.php" class="btn btn-lila btn-lg rounded-pill mt-4">Nuestros Servicios</a>
+    </div>
+
+</section>
+
+<?php include 'includes/footer.php' ?>

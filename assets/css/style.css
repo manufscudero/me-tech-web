@@ -6,7 +6,15 @@
     --verde-lima: #048300;
     --lila-suave: #efedff;
     --gris-claro: #a19a9a;
+    --bg-adaptive: #ffffff;
+    /* Fondo blanco */
+    --text-adaptive: #212529;
+    /* Texto casi negro */
+    --text-muted-adaptive: #6c757d;
+    /* Gris estándar */
+    --card-border: #dee2e6;
 }
+
 /* Poppins Regular */
 @font-face {
     font-family: 'Poppins';
@@ -51,7 +59,7 @@ body {
     color: white !important;
     font-weight: 500;
     position: relative;
-    margin: 0 10px; /* Espaciado entre links */
+    margin: 0 10px;
     padding-bottom: 5px !important;
     transition: color 0.3s ease;
 }
@@ -86,12 +94,13 @@ body {
 }
 
 .nav-link.active::after {
-    width: 100%; 
+    width: 100%;
 }
-@media (max-width: 991px){
+
+@media (max-width: 991px) {
     .nav-link.active::after {
-    width: 30%;
-}
+        width: 30%;
+    }
 }
 
 /* Navegación Responsive  */
@@ -110,9 +119,9 @@ body {
         text-align: center;
         padding: 1rem 0;
     }
-    
+
     .nav-link::after {
-        left: 50%; 
+        left: 50%;
     }
 }
 
@@ -230,15 +239,24 @@ body {
     height: 50vh !important;
     min-height: 600px !important;
     padding: 0 !important;
-    /* Eliminamos el padding para que el carrusel sea full */
 }
 
 .hero-slide-container {
     height: 50vh !important;
     min-height: 600px !important;
     background-size: cover !important;
-    background-position: 55% 80% !important;
+    background-position: 55% 100% !important;
+    background-repeat: no-repeat !important;
     position: relative !important;
+}
+
+/* Para modificar por separado las imagenes del carrusel*/
+.carousel-item:nth-child(2) .hero-slide-container {
+    background-position: 55% 80% !important;
+}
+
+.carousel-item:nth-child(3) .hero-slide-container {
+    background-position: 55% 60% !important;
 }
 
 
@@ -260,23 +278,22 @@ body {
 .hero-content {
     position: relative !important;
     z-index: 2 !important;
-    /* Por encima del degradado */
 }
 
 .text-lila {
     color: var(--lila-principal);
 }
-/* --- AJUSTE TITULOS HERO RESPONSIVE --- */
+
+/*AJUSTE TITULOS HERO RESPONSIVE*/
 
 /* En tablets y móviles */
 @media (max-width: 991.98px) {
     .hero-content h1.display-4 {
-        /* Forzamos un tamaño mayor al estándar de Bootstrap */
-        font-size: calc(1.8rem + 3vw) !important; 
+        font-size: calc(1.8rem + 3vw) !important;
         line-height: 1.1;
         margin-bottom: 1rem !important;
     }
-    
+
     .hero-content p.lead {
         font-size: 1.1rem;
         margin-bottom: 2rem !important;
@@ -286,16 +303,15 @@ body {
 /* En celulares pequeños (iPhone, Samsung base, etc.) */
 @media (max-width: 575.98px) {
     .hero-content h1.display-4 {
-        font-size: 2.2rem !important; /* Tamaño sólido para pantallas pequeñas */
+        font-size: 2.2rem !important;
         text-align: center;
     }
-    
+
     .hero-content p.lead {
         text-align: center;
         font-size: 1rem;
     }
-    
-    /* Centramos los botones en móvil para que se vea más equilibrado */
+
     .hero-content .d-flex {
         justify-content: center;
     }
@@ -317,7 +333,6 @@ body {
 
 .bg-opcion-dark:hover {
     background-color: rgba(162, 155, 254, 0.1) !important;
-    /* Brillo lila al pasar el mouse */
     border-color: var(--lila-principal) !important;
 }
 
@@ -372,7 +387,6 @@ body {
 /* Estilo para Inputs del Modal */
 .modal-content {
     background-color: #1a1a1a;
-    /* Fondo del modal oscuro */
     border: 1px solid rgba(108, 92, 231, 0.2);
 }
 
@@ -380,7 +394,6 @@ body {
     background-color: #2d2d2d !important;
     border: 1px solid #444 !important;
     color: #ffffff !important;
-    /* Texto que escribe el usuario */
     padding: 12px 15px;
     border-radius: 10px;
     transition: all 0.3s ease;
@@ -453,9 +466,7 @@ body {
 /* Efecto al pasar el mouse sobre la card */
 .card-problema:hover {
     transform: translateY(-10px);
-    /* Se eleva un poquito */
     box-shadow: 0 10px 25px rgba(108, 92, 231, 0.15) !important;
-    /* Sombra lila suave */
     border: 1px solid rgba(108, 92, 231, 0.3) !important;
 }
 
@@ -477,13 +488,11 @@ body {
     background: #6c5ce7;
     color: white;
     transform: rotate(15deg);
-    /* Pequeño giro del icono */
 }
 
 /* Color por defecto (Modo Claro) */
 .card-title-serv {
     color: #212529;
-    /* Un gris muy oscuro, casi negro */
     transition: color 0.3s ease;
 }
 
@@ -534,7 +543,6 @@ body {
 /* Forzar fondo oscuro si falla la clase de Bootstrap */
 .bg-azul-marino {
     background-color: #0a0e1a !important;
-    /* Ajusta a tu azul oscuro exacto */
 }
 
 .process-card {
@@ -561,7 +569,6 @@ body {
     height: 35px;
     background-color: var(--lila-principal) !important;
     color: #0a0e1a !important;
-    /* Color oscuro para el número */
     font-weight: bold;
     border-radius: 50%;
     display: flex;
@@ -608,6 +615,7 @@ body {
         z-index: 0;
     }
 }
+
 /* --- ESTILOS TESTIMONIOS --- */
 
 .testimonial-card {
@@ -620,7 +628,8 @@ body {
 
 /* --- AJUSTES ESPECÍFICOS DARK MODE --- */
 [data-bs-theme="dark"] .testimonial-card {
-    background-color: #2b3035 !important; /* Gris oscuro para el card */
+    background-color: #2b3035 !important;
+    /* Gris oscuro para el card */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4) !important;
 }
 
@@ -658,10 +667,11 @@ body {
 .fa-quote-left {
     opacity: 0.3;
 }
+
 /* Estilo para el cargo/profesión */
 .role-text {
     font-size: 0.85rem;
-    display: block; /* Asegura que vaya debajo del nombre */
+    display: block;
     opacity: 0.8;
 }
 
@@ -916,7 +926,7 @@ body {
 
 /* Badge de Precio con Degradado Naranja */
 .badge-precio-pro {
-    background: linear-gradient(135deg, #6c5ce7 0%, #8e44ad 100%) !important;
+    background: linear-gradient(135deg, #1795fc 0%, #9111fa 100%) !important;
     color: #ffffff !important;
     font-weight: 700;
     font-size: 0.95rem;
@@ -929,7 +939,7 @@ body {
 
 /* Ajuste para el Modo Oscuro para que no sea tan brillante */
 [data-bs-theme="dark"] .badge-precio-pro {
-    background: linear-gradient(135deg, #9111fa 0%, #1795fc 100%) !important;
+    background: linear-gradient(135deg, #1795fc 0%, #9111fa 100%) !important;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -956,6 +966,103 @@ body {
     background-color: rgba(108, 92, 231, 0.2);
 }
 
+/* Efecto de luz suave para el modo oscuro */
+.bg-lila-transparent {
+    background: rgba(145, 17, 250, 0.1);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+/**NOSOTROS**/
+/* AJUSTE ESPECÍFICO PARA EL HERO DE ESENCIA EN MÓVILES */
+@media (max-width: 767.98px) {
+    .hero-esencia h1.display-4 {
+        font-size: 2.5rem !important;
+        /* Tamaño contundente en móvil */
+        line-height: 1.2;
+        padding: 0 10px;
+    }
+
+    .hero-esencia .container {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+
+    /* Opcional: Quitar el <br> en móviles para que el texto fluya mejor */
+    .hero-esencia h1 br {
+        display: none;
+    }
+}
+
+/* Para pantallas extra pequeñas (iPhone SE, etc.) */
+@media (max-width: 375px) {
+    .hero-esencia h1.display-4 {
+        font-size: 2.1rem !important;
+    }
+}
+
+/* Variables Adaptativas (Siguen la lógica de tu botón Dark Mode) */
+[data-bs-theme="dark"] {
+    --bg-adaptive: #0b0d0f;
+    --text-adaptive: #f8f9fa;
+    --text-muted-adaptive: #adb5bd;
+    --card-border-adaptive: #2a2e34;
+}
+
+[data-bs-theme="light"],
+:root:not([data-bs-theme="dark"]) {
+    --bg-adaptive: #ffffff;
+    --text-adaptive: #212529;
+    --text-muted-adaptive: #6c757d;
+    --card-border-adaptive: #dee2e6;
+}
+
+/* Aplicación de clases */
+.bg-adaptive {
+    background-color: var(--bg-adaptive) !important;
+    transition: background-color 0.3s ease;
+}
+
+.text-adaptive {
+    color: var(--text-adaptive) !important;
+    transition: color 0.3s ease;
+}
+
+/* Arreglo crucial: Fuerza a text-muted a cambiar de color según el tema 
+   dentro de las secciones adaptativas */
+.bg-adaptive .text-muted {
+    color: var(--text-muted-adaptive) !important;
+}
+
+/* Estilo de las tarjetas de valores */
+.card-valor {
+    background: transparent;
+    border: 1px solid var(--card-border-adaptive) !important;
+    transition: all 0.3s ease;
+}
+
+.card-valor:hover {
+    border-color: var(--lila-principal) !important;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(145, 17, 250, 0.1);
+}
+
+.valor-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+    background: rgba(162, 155, 254, 0.1);
+    /* Usando tu variable lila-principal */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /*FOOTER*/
 .footer-me {
     background-color: var(--azul-marino);
@@ -971,6 +1078,7 @@ body {
 .text-lila {
     color: var(--lila-principal) !important;
 }
+
 /* Estilos Botón Flotante */
 .whatsapp-float {
     position: fixed;
@@ -983,8 +1091,9 @@ body {
     border-radius: 50px;
     text-align: center;
     font-size: 30px;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
-    z-index: 1000; /* Asegura que esté por encima de todo */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    /* Asegura que esté por encima de todo */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -995,7 +1104,7 @@ body {
 .whatsapp-float:hover {
     background-color: #128c7e;
     color: #FFF;
-    transform: scale(1.1); /* Efecto de crecimiento al pasar el mouse */
+    transform: scale(1.1);
 }
 
 /* Animación de entrada o pulso (Opcional) */
@@ -1004,9 +1113,17 @@ body {
 }
 
 @keyframes pulse-whatsapp {
-    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
 }
 
 /* Ajuste para móviles */
@@ -1037,7 +1154,6 @@ body {
 }
 
 /* CONTACTO */
-/* 1. Base para los iconos */
 .icon-only-contact {
     font-size: 1.8rem;
     display: flex;
@@ -1045,15 +1161,12 @@ body {
     justify-content: center;
     transition: all 0.3s ease;
     color: var(--lila-principal);
-    /* Color por defecto para los demás */
 }
 
-/* 2. Color inicial de WhatsApp */
 .card-whatsapp .icon-only-contact {
-    color: #2fb606;
+    color: var(--lila-principal);
 }
 
-/* 3. Estilo base de los Cards de contacto */
 .contact-card-info {
     color: var(--azul-marino);
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -1062,14 +1175,12 @@ body {
 
 }
 
-/* 4. Efecto HOVER General (No WhatsApp) */
 .contact-card-info:hover:not(.card-whatsapp) {
     border-color: var(--lila-principal);
     transform: translateY(-5px);
     cursor: pointer;
 }
 
-/* 5. Efecto HOVER de WhatsApp (Fondo verde y textos blancos) */
 .card-whatsapp:hover {
     background-color: #25D366 !important;
     border-color: #25D366 !important;
@@ -1125,9 +1236,8 @@ body {
 
 /* --- ESTILOS ESPECÍFICOS PARA UBICACIÓN --- */
 
-/* Color inicial del icono (Turquesa) */
 .card-ubicacion .icon-only-contact {
-    color: #57c0e0;
+    color: var(--lila-principal);
 }
 
 /* Efecto HOVER para la tarjeta de Ubicación */

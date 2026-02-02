@@ -33,13 +33,13 @@ $pagina_actual = basename($_SERVER['PHP_SELF']);
                     <a class="nav-link <?php echo ($pagina_actual == 'servicios.php') ? 'active' : ''; ?>" href="servicios.php">Servicios</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?php echo ($pagina_actual == 'nosotros.php') ? 'active' : ''; ?>" href="nosotros.php">Sobre mí</a>
+                    <a class="nav-link <?php echo ($pagina_actual == 'nosotros.php') ? 'active' : ''; ?>" href="nosotros.php">Nosotros</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link <?php echo ($pagina_actual == 'contacto.php') ? 'active' : ''; ?>" href="contacto.php">Contacto</a>
                 </li>
                 <button id="btn-theme" class="btn border-0 text-lila fs-5 p-0 me-3" title="Cambiar modo">
-                        <i id="theme-icon" class="fas fa-moon"></i>
+                        <i id="theme-icon" class="fa-regular fa-moon"></i>
                     </button>
             </ul>
         </div>

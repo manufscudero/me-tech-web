@@ -98,6 +98,25 @@
                     </div>
                 </div>
             </div>
+            <div class="col-lg-6">
+                <div class="card h-100 border-0 shadow-sm rounded-4 p-4 card-servicio overflow-hidden">
+                    <div class="servicio-header">
+                        <div class="servicio-icon-wrapper">
+                            <img src="assets/img/servicios/ps4_servicio.png" alt="PS4" class="servicio-icon-3d">
+                        </div>
+                        <div class="flex-grow-1">
+                            <h4 class="servicio-title">Mantenimiento Preventivo PS4</h4>
+                        </div>
+                    </div>
+                    <p class="text-muted mb-4">Limpieza general, eliminación de polvo, cambio de pasta térmica de alto rendimiento y lubricación de ventiladores.</p>
+                    <div class="mt-auto d-flex justify-content-between align-items-center">
+                        <span class="badge-precio-pro">Gs. 250.000</span>
+                        <a href="https://wa.me/595984608269?text=Hola! Me interesa el mantenimiento para mi PlayStation 4" class="btn-whatsapp-grad text-decoration-none">
+                            <i class="fab fa-whatsapp me-2"></i>Consultar
+                        </a>
+                    </div>
+                </div>
+            </div>
 
             <div class="col-lg-6">
                 <div class="card h-100 border-0 shadow-sm rounded-4 p-4 card-servicio overflow-hidden">

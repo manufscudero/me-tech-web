@@ -11,7 +11,7 @@
                             <p class="lead mb-5 text-white-50">Especialistas en Hardware y micro-soldadura. Soporte técnico rápido para hogares y empresas con garantía escrita.</p>
                             <div class="d-flex gap-3 flex-wrap">
                                 <a href="#" class="btn-lila" data-bs-toggle="modal" data-bs-target="#modalSoporte">
-                                    <i class="fas fa-tools me-2"></i> SOLICITAR ASISTENCIA
+                                    <i class="fas fa-user-gear me-2"></i> SOLICITAR ASISTENCIA
                                 </a>
                                 <a href="/servicios.php" class="btn btn-outline-light btn-lg rounded-pill">Nuestros Servicios</a>
                             </div>
@@ -20,7 +20,24 @@
                 </div>
             </div>
         </div>
-
+        <div class="carousel-item h-100">
+            <div class="hero-slide-container" style="background-image: url('assets/img/header/ps4.jpg');">
+                <div class="container h-100">
+                    <div class="row h-100 align-items-center">
+                        <div class="col-lg-7 hero-content">
+                            <h1 class="display-4 fw-bold mb-4 text-white">Mantenimiento Preventivo <span class="text-lila">PlayStation 4</span></h1>
+                            <p class="lead mb-5 text-white-50">¿Tu consola suena como un avión? Evita sobrecalentamiento y daños en tu equipo con limpieza profunda y cambio de pasta térmica.</p>
+                            <div class="d-flex gap-3 flex-wrap">
+                                <a href="https://wa.me/595984608269?text=Hola! Necesito mantenimiento para mi PlayStation 4" class="btn-whatsapp-grad text-decoration-none">
+                                    <i class="fab fa-whatsapp me-2"></i>CONSULTAR PRESUPUESTO
+                                </a>
+                                <a href="/servicios.php" class="btn btn-outline-light btn-lg rounded-pill">Ver más servicios</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="carousel-item h-100">
             <div class="hero-slide-container" style="background-image: url('assets/img/header/remoto.jpg');">
                 <div class="container h-100">
@@ -33,7 +50,7 @@
                                     data-bs-toggle="modal"
                                     data-bs-target="#modalSoporte"
                                     onclick="showForm('Remoto')">
-                                    <i class="fas fa-house me-2"></i> SOLICITAR ASISTENCIA REMOTA
+                                    <i class="fas fa-house-laptop me-2"></i> SOLICITAR ASISTENCIA REMOTA
                                 </a>
                                 <a href="/servicios.php" class="btn btn-outline-light btn-lg rounded-pill">Ver más servicios</a>
                             </div>
@@ -42,6 +59,7 @@
                 </div>
             </div>
         </div>
+
 
         <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
             <span class="carousel-control-custom">
@@ -69,14 +87,14 @@
                     <div class="row g-3">
                         <div class="col-6">
                             <div class="card bg-opcion-dark border-secondary h-100 text-center p-3 option-card" onclick="showForm('Físico / Taller')">
-                                <div class="icon-circle mb-3"><i class="fas fa-tools fa-2x text-lila"></i></div>
+                                <div class="icon-circle mb-3"><i class="fas fa-user-gear fa-2x text-lila"></i></div>
                                 <h6 class="fw-bold text-white">Físico / Taller</h6>
                                 <small class="text-light-50">Reparación o mantenimiento en taller</small>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="card bg-opcion-dark border-secondary h-100 text-center p-3 option-card" onclick="showForm('Remoto')">
-                                <div class="icon-circle mb-3"><i class="fas fa-laptop-house fa-2x text-success"></i></div>
+                                <div class="icon-circle mb-3"><i class="fas fa-laptop-house fa-2x text-lila"></i></div>
                                 <h6 class="fw-bold text-white">Remoto</h6>
                                 <small class="text-light-50">Solución online vía AnyDesk</small>
                             </div>
@@ -153,11 +171,11 @@
 
         <div class="row g-4">
             <div class="col-md-4">
-                <a href="https://wa.me/595984608269?text=Hola!%20Quisiera%20consultar%20acerca%20de%20los%20servicios%20porque%20mi%20computadora%20está%20muy%20lenta."
+                <a href="https://wa.me/595984608269?text=Hola!%20Quisiera%20consultar%20acerca%20de%20los%20servicios%20porque%20mi%20equipo%20está%20muy%20lento."
                     class="text-decoration-none h-100 d-block">
                     <div class="card h-100 border-0 shadow-sm p-4 card-problema">
                         <div class="icon-circle-lila mb-3">
-                            <i class="fas fa-bolt-lightning"></i>
+                            <i class="fas fa-arrow-trend-down"></i>
                         </div>
                         <h5 class="fw-bold card-title-serv">¿Está muy lenta?</h5>
                         <p class="small text-muted mb-0">Tarda en encender, los programas se cuelgan o el sistema se siente pesado. Realizamos optimización de software y upgrades de hardware.</p>
@@ -170,7 +188,7 @@
                     class="text-decoration-none h-100 d-block">
                     <div class="card h-100 border-0 shadow-sm p-4 card-problema">
                         <div class="icon-circle-lila mb-3">
-                            <i class="fas fa-thermometer-half"></i>
+                            <i class="fas fa-temperature-high"></i>
                         </div>
                         <h5 class="fw-bold card-title-serv">¿Calienta demasiado?</h5>
                         <p class="small text-muted mb-0">Si el ventilador hace ruido y/o se siente muy caliente, tu equipo corre peligro. Una limpieza técnica a tiempo evita que se queme el procesador.</p>
