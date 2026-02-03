@@ -7,11 +7,8 @@
     --lila-suave: #efedff;
     --gris-claro: #a19a9a;
     --bg-adaptive: #ffffff;
-    /* Fondo blanco */
     --text-adaptive: #212529;
-    /* Texto casi negro */
     --text-muted-adaptive: #6c757d;
-    /* Gris estándar */
     --card-border: #dee2e6;
 }
 
@@ -31,11 +28,7 @@
     font-style: normal;
 }
 
-/* Aplicar a toda la web */
-body {
-    font-family: 'Poppins', sans-serif;
-}
-
+/* Global */
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--blanco-suave);
@@ -49,12 +42,12 @@ body {
 }
 
 .logo-navbar {
-    height: 70px;
+    height: 60px;
     width: auto;
     object-fit: contain;
 }
 
-/* --- ENLACES Y ANIMACIÓN DE SUBRAYADO --- */
+/*ENLACES Y ANIMACIÓN DE SUBRAYADO*/
 .nav-link {
     color: white !important;
     font-weight: 500;
@@ -64,7 +57,7 @@ body {
     transition: color 0.3s ease;
 }
 
-/* Subrayado del navbar*/
+/*Subrayado del navbar*/
 .nav-link::after {
     content: '';
     position: absolute;
@@ -77,7 +70,7 @@ body {
     transform: translateX(-50%);
 }
 
-/* Estado Hover: */
+/*Estado Hover*/
 .nav-link:hover {
     color: white !important;
 }
@@ -86,7 +79,7 @@ body {
     width: 100%;
 }
 
-/* ESTADO ACTIVO (Página actual) */
+/*ESTADO ACTIVO (Página actual)*/
 
 .nav-link.active {
     color: white !important;
@@ -94,27 +87,12 @@ body {
 }
 
 .nav-link.active::after {
-    width: 100%;
+    width: 80%;
 }
 
+
+/*Ajustar la navegacion en celular con los colores degradados, por que bootstrap no deja*/
 @media (max-width: 991px) {
-    .nav-link.active::after {
-        width: 30%;
-    }
-}
-
-/* Navegación Responsive  */
-@media (max-width: 991px) {
-    .navbar {
-        padding: 1rem;
-    }
-
-    .logo-navbar {
-        height: 60px;
-        margin-left: 0;
-    }
-
-
     .navbar-nav {
         text-align: center;
         padding: 1rem 0;
@@ -122,6 +100,10 @@ body {
 
     .nav-link::after {
         left: 50%;
+    }
+
+    .nav-link.active::after {
+        width: 30%;
     }
 }
 
@@ -165,7 +147,6 @@ body {
 /* Estilos del Acordeón en Dark Mode */
 [data-bs-theme="dark"] .accordion-item {
     background-color: #2b3035 !important;
-    /* Fondo gris oscuro */
     border-color: #495057 !important;
 }
 
@@ -234,6 +215,89 @@ body {
     transform: translateY(-1px) scale(1);
 }
 
+.btn-whatsapp-grad {
+    background: linear-gradient(135deg, #019214 0%, #1ac74e 100%) !important;
+    color: #ffffff !important;
+    border: none !important;
+    font-weight: 600;
+    padding: 10px 24px;
+    border-radius: 50px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2);
+    text-decoration: none;
+}
+
+.btn-whatsapp-grad:hover {
+    background: linear-gradient(135deg, #01da0c 0%, #3fdd30 100%) !important;
+    color: #ffffff !important;
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(18, 140, 126, 0.4);
+}
+
+.btn-whatsapp-grad:active {
+    transform: translateY(0) scale(0.98);
+}
+
+/*Efecto al boton final de Presupuesto*/
+#cta-final .btn-light {
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+#cta-final .btn-light:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+}
+
+/* Estilos Botón Flotante */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    background-color: #128c7e;
+    color: #FFF;
+    transform: scale(1.1);
+}
+
+/* Animación de entrada*/
+.whatsapp-float {
+    animation: pulse-whatsapp 2s infinite;
+}
+
+@keyframes pulse-whatsapp {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
 /* AJUSTES DEL HERO CARRUSEL */
 .hero {
     height: 50vh !important;
@@ -284,41 +348,9 @@ body {
     color: var(--lila-principal);
 }
 
-/*AJUSTE TITULOS HERO RESPONSIVE*/
-
-/* En tablets y móviles */
-@media (max-width: 991.98px) {
-    .hero-content h1.display-4 {
-        font-size: calc(1.8rem + 3vw) !important;
-        line-height: 1.1;
-        margin-bottom: 1rem !important;
-    }
-
-    .hero-content p.lead {
-        font-size: 1.1rem;
-        margin-bottom: 2rem !important;
-    }
-}
-
-/* En celulares pequeños (iPhone, Samsung base, etc.) */
-@media (max-width: 575.98px) {
-    .hero-content h1.display-4 {
-        font-size: 2.2rem !important;
-        text-align: center;
-    }
-
-    .hero-content p.lead {
-        text-align: center;
-        font-size: 1rem;
-    }
-
-    .hero-content .d-flex {
-        justify-content: center;
-    }
-}
 
 /* ESTILOS DEL MODAL */
-/* Forzar el fondo del modal al azul marino de tu marca */
+
 .modal-custom {
     background-color: var(--azul-marino) !important;
     color: white !important;
@@ -408,10 +440,9 @@ body {
     padding: 10px 15px;
 }
 
-/* Color del Placeholder - ¡Esto es lo que buscabas! */
+/* Color del Placeholder */
 .form-control-dark::placeholder {
     color: #a0a0a0 !important;
-    /* Gris claro que resalta */
     opacity: 1;
 }
 
@@ -419,7 +450,6 @@ body {
 .form-control-dark:focus {
     background-color: #2a2a2a !important;
     border-color: #6c5ce7 !important;
-    /* Tu lila principal */
     box-shadow: 0 0 0 0.25rem rgba(108, 92, 231, 0.25) !important;
     outline: none;
 }
@@ -523,21 +553,6 @@ body {
     font-size: 1.2rem;
 }
 
-/* Borde lila para la imagen de "Sobre Mí" */
-.border-lila {
-    border: 1px solid var(--lila-principal);
-}
-
-/* Efecto de grises para los logos (opcional) */
-.grayscale-filter {
-    filter: grayscale(100%);
-    transition: filter 0.3s ease;
-}
-
-.grayscale-filter:hover {
-    filter: grayscale(0%);
-}
-
 /*SECCIÓN PROCESO*/
 
 /* Forzar fondo oscuro si falla la clase de Bootstrap */
@@ -598,24 +613,6 @@ body {
     background: rgba(162, 155, 254, 0.1);
 }
 
-/* Línea conectora (solo visible en pantallas grandes) */
-@media (min-width: 768px) {
-    .process-row {
-        position: relative;
-    }
-
-    .process-row::before {
-        content: '';
-        position: absolute;
-        top: 37px;
-        left: 15%;
-        right: 15%;
-        height: 2px;
-        background: linear-gradient(90deg, transparent, rgba(162, 155, 254, 0.3), transparent);
-        z-index: 0;
-    }
-}
-
 /* --- ESTILOS TESTIMONIOS --- */
 
 .testimonial-card {
@@ -629,7 +626,6 @@ body {
 /* --- AJUSTES ESPECÍFICOS DARK MODE --- */
 [data-bs-theme="dark"] .testimonial-card {
     background-color: #2b3035 !important;
-    /* Gris oscuro para el card */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4) !important;
 }
 
@@ -641,7 +637,6 @@ body {
     background-color: rgba(13, 202, 240, 0.15) !important;
 }
 
-/* Opcional: Para que la sección no sea un negro total sino un gris profundo */
 [data-bs-theme="dark"] #testimonios {
     background-color: #212529 !important;
 }
@@ -692,43 +687,6 @@ body {
     border-color: var(--lila-principal);
 }
 
-/* Banner de Acción Final */
-#cta-final {
-    background:
-        radial-gradient(at 0% 100%, rgba(108, 92, 231, 0.4) 0, transparent 50%),
-        radial-gradient(at 100% 0%, rgba(255, 118, 117, 0.2) 0, transparent 50%),
-        #0f0f13 !important;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    position: relative;
-    overflow: hidden;
-}
-
-#cta-final h2,
-#cta-final p {
-    color: #ffffff !important;
-}
-
-#cta-final .btn-light {
-    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease;
-}
-
-#cta-final .btn-light:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
-}
-
-#cta-final .btn-outline-light {
-    border: 2px solid #ffffff !important;
-    color: #ffffff !important;
-    transition: all 0.3s ease;
-}
-
-#cta-final .btn-outline-light:hover {
-    background-color: #ffffff !important;
-    color: #6c5ce7 !important;
-}
-
 /* Redes Sociales */
 .social-links a {
     width: 38px;
@@ -756,13 +714,6 @@ body {
     margin-left: auto;
 }
 
-@media (max-width: 768px) {
-    .disclaimer-legal {
-        margin: 10px auto 0;
-    }
-}
-
-
 /*  SERVICIOS DETALLADOS */
 .header-servicios,
 #cta-final {
@@ -785,14 +736,12 @@ body {
 
 .blob-1 {
     background: #00d2ff;
-    /* Cian */
     top: -150px;
     right: -100px;
 }
 
 .blob-2 {
     background: #9d50bb;
-    /* Morado */
     bottom: -150px;
     left: -100px;
     animation-delay: -7s;
@@ -805,24 +754,6 @@ body {
     width: 300px;
     opacity: 0.2;
     animation-delay: -3s;
-}
-
-@keyframes moveBlobs {
-    0% {
-        transform: translate(0, 0) scale(1);
-    }
-
-    33% {
-        transform: translate(30px, -50px) scale(1.1);
-    }
-
-    66% {
-        transform: translate(-20px, 20px) scale(0.95);
-    }
-
-    100% {
-        transform: translate(0, 0) scale(1);
-    }
 }
 
 .header-separator {
@@ -878,7 +809,7 @@ body {
     margin-right: 0.5rem;
 }
 
-/* La imagen 3D propiamente dicha */
+/* La imagen 3D en Servicios*/
 .servicio-icon-3d {
     width: 170px;
     height: auto;
@@ -897,32 +828,7 @@ body {
     line-height: 1.2;
 }
 
-/* Botón Específico para Consultas de WhatsApp */
-.btn-whatsapp-grad {
-    background: linear-gradient(135deg, #019214 0%, #1ac74e 100%) !important;
-    color: #ffffff !important;
-    border: none !important;
-    font-weight: 600;
-    padding: 10px 24px;
-    border-radius: 50px;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2);
-    text-decoration: none;
-}
 
-.btn-whatsapp-grad:hover {
-    background: linear-gradient(135deg, #01da0c 0%, #3fdd30 100%) !important;
-    color: #ffffff !important;
-    transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 8px 20px rgba(18, 140, 126, 0.4);
-}
-
-.btn-whatsapp-grad:active {
-    transform: translateY(0) scale(0.98);
-}
 
 /* Badge de Precio con Degradado Naranja */
 .badge-precio-pro {
@@ -954,7 +860,6 @@ body {
 [data-bs-theme="dark"] .bg-lila-suave {
     background-color: rgba(108, 92, 231, 0.2) !important;
     color: #a29bfe !important;
-    /* Un lila más claro para que resalte en el negro */
 }
 
 /* Adaptación para Dark Mode */
@@ -977,35 +882,8 @@ body {
     border-radius: 50%;
 }
 
-/**NOSOTROS**/
-/* AJUSTE ESPECÍFICO PARA EL HERO DE ESENCIA EN MÓVILES */
-@media (max-width: 767.98px) {
-    .hero-esencia h1.display-4 {
-        font-size: 2.5rem !important;
-        /* Tamaño contundente en móvil */
-        line-height: 1.2;
-        padding: 0 10px;
-    }
 
-    .hero-esencia .container {
-        padding-top: 2rem !important;
-        padding-bottom: 2rem !important;
-    }
-
-    /* Opcional: Quitar el <br> en móviles para que el texto fluya mejor */
-    .hero-esencia h1 br {
-        display: none;
-    }
-}
-
-/* Para pantallas extra pequeñas (iPhone SE, etc.) */
-@media (max-width: 375px) {
-    .hero-esencia h1.display-4 {
-        font-size: 2.1rem !important;
-    }
-}
-
-/* Variables Adaptativas (Siguen la lógica de tu botón Dark Mode) */
+/* Variables Adaptativas (Siguen la lógica del Dark Mode) */
 [data-bs-theme="dark"] {
     --bg-adaptive: #0b0d0f;
     --text-adaptive: #f8f9fa;
@@ -1032,8 +910,6 @@ body {
     transition: color 0.3s ease;
 }
 
-/* Arreglo crucial: Fuerza a text-muted a cambiar de color según el tema 
-   dentro de las secciones adaptativas */
 .bg-adaptive .text-muted {
     color: var(--text-muted-adaptive) !important;
 }
@@ -1056,7 +932,6 @@ body {
     height: 60px;
     margin: 0 auto;
     background: rgba(162, 155, 254, 0.1);
-    /* Usando tu variable lila-principal */
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1079,63 +954,7 @@ body {
     color: var(--lila-principal) !important;
 }
 
-/* Estilos Botón Flotante */
-.whatsapp-float {
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 40px;
-    right: 40px;
-    background-color: #25d366;
-    color: #FFF;
-    border-radius: 50px;
-    text-align: center;
-    font-size: 30px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    /* Asegura que esté por encima de todo */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
 
-.whatsapp-float:hover {
-    background-color: #128c7e;
-    color: #FFF;
-    transform: scale(1.1);
-}
-
-/* Animación de entrada o pulso (Opcional) */
-.whatsapp-float {
-    animation: pulse-whatsapp 2s infinite;
-}
-
-@keyframes pulse-whatsapp {
-    0% {
-        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-    }
-
-    70% {
-        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
-    }
-
-    100% {
-        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-    }
-}
-
-/* Ajuste para móviles */
-@media screen and (max-width: 768px) {
-    .whatsapp-float {
-        width: 50px;
-        height: 50px;
-        bottom: 20px;
-        right: 20px;
-        font-size: 25px;
-    }
-}
 
 /* Enlaces del Footer */
 .footer-links li {
@@ -1197,10 +1016,8 @@ body {
     opacity: 1 !important;
 }
 
-/* 6. Forzar legibilidad base (Fuera de hover) */
 .text-emphasis-contact {
     color: var(--bs-heading-color);
-    /* Sin !important aquí para permitir el hover */
 }
 
 [data-bs-theme="dark"] .text-emphasis-contact {
@@ -1212,7 +1029,7 @@ body {
     opacity: 0.85;
 }
 
-/* 7. Ajustes por Tema (Backgrounds) */
+/* Ajustes por Tema */
 [data-bs-theme="dark"] .contact-card-info {
     background-color: #1a1d24;
 }
@@ -1220,18 +1037,6 @@ body {
 [data-bs-theme="light"] .contact-card-info {
     background-color: #ffffff;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-}
-
-/* 8. Responsive */
-@media (max-width: 991px) {
-    h1.fw-bold {
-        font-size: 1.8rem;
-        margin-top: 1rem;
-    }
-
-    .contact-details-wrapper {
-        margin-top: 2rem;
-    }
 }
 
 /* --- ESTILOS ESPECÍFICOS PARA UBICACIÓN --- */

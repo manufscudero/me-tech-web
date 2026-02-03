@@ -79,7 +79,50 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-// DARK MODE (FUERA DEL DOMCONTENTLOADED)
+//PAGINA DE CONTACTO
+const contactForm = document.getElementById('mainContactForm');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const formData = {
+            nombre: this.querySelector('[name="nombre"]').value.trim(),
+            email: this.querySelector('[name="email"]').value.trim(),
+            telefono: this.querySelector('[name="telefono"]').value.trim(),
+            mensaje: this.querySelector('[name="mensaje"]').value.trim()
+        };
+
+        // Validación de Email
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailPattern.test(formData.email)) {
+            alert("Por favor, ingresa un correo electrónico válido.");
+            return;
+        }
+
+        if (formData.mensaje.length < 10) {
+            alert("Por favor, danos un poco más de detalle sobre tu problema.");
+            return;
+        }
+
+        // Simulación de envío exitoso
+        console.log("Enviando datos de Contacto:", formData);
+        alert("¡Mensaje recibido! Te responderemos al correo o WhatsApp pronto.");
+        this.reset();
+    });
+    const telefonoInput = document.querySelector('input[name="telefono"]');
+
+    if (telefonoInput) {
+        telefonoInput.addEventListener('keypress', function (e) {
+            // Bloquea cualquier tecla que no sea un número (0-9)
+            if (isNaN(String.fromCharCode(e.which)) && e.which !== 8) {
+                e.preventDefault();
+            }
+        });
+    }
+}
+// DARK MODE
 const btnTheme = document.getElementById('btn-theme');
 const themeIcon = document.getElementById('theme-icon');
 const htmlElement = document.documentElement;
@@ -109,47 +152,3 @@ if (btnTheme && themeIcon) {
     }
 }
 
-//PAGINA DE CONTACTO
-const contactForm = document.getElementById('mainContactForm');
-
-if (contactForm) {
-    contactForm.addEventListener('submit', function (e) {
-        e.preventDefault();
-
-        // Capturamos los campos específicos de ESTE form
-        const formData = {
-            nombre: this.querySelector('[name="nombre"]').value.trim(),
-            email: this.querySelector('[name="email"]').value.trim(),
-            telefono: this.querySelector('[name="telefono"]').value.trim(),
-            mensaje: this.querySelector('[name="mensaje"]').value.trim()
-        };
-
-        // Validación de Email con Expresión Regular
-        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-        if (!emailPattern.test(formData.email)) {
-            alert("Por favor, ingresa un correo electrónico válido.");
-            return;
-        }
-
-        if (formData.mensaje.length < 10) {
-            alert("Por favor, danos un poco más de detalle sobre tu problema.");
-            return;
-        }
-
-        // Simulación de envío exitoso
-        console.log("Enviando datos de Contacto:", formData);
-        alert("¡Mensaje recibido! Te responderemos al correo o WhatsApp pronto.");
-        this.reset();
-    });
-    const telefonoInput = document.querySelector('input[name="telefono"]');
-
-    if (telefonoInput) {
-        telefonoInput.addEventListener('keypress', function (e) {
-            // Bloquea cualquier tecla que no sea un número (0-9)
-            if (isNaN(String.fromCharCode(e.which)) && e.which !== 8) {
-                e.preventDefault();
-            }
-        });
-    }
-}

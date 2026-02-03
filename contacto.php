@@ -34,8 +34,8 @@
                                 <input type="email" name="email" class="form-control" placeholder="ejemplo@correo.com" required>
                             </div>
                             <div class="col-12">
-                                <label class="form-label text-emphasis-contact">¿Cómo puedo ayudarte?</label>
-                                <textarea name="mensaje" class="form-control" rows="5" placeholder="Cuéntame qué problema tiene tu equipo o qué servicio necesitas..." required></textarea>
+                                <label class="form-label text-emphasis-contact">¿Cómo podemos ayudarte?</label>
+                                <textarea name="mensaje" class="form-control" rows="5" placeholder="Cuéntanos qué problema tiene tu equipo o qué servicio necesitas..." required></textarea>
                             </div>
                             <div class="col-12 mt-4">
                                 <button type="submit" class="btn-whatsapp-grad w-100 py-3">
@@ -50,7 +50,7 @@
             <div class="col-lg-5 order-2 order-lg-1">
                 <h1 class="display-5 fw-bold mb-4 d-none d-lg-block">¿Hablamos de <span class="text-lila">tu equipo?</span></h1>
                 <p class="lead mb-5 text-description-contact d-none d-lg-block">
-                    Ya sea para una reparación, mantenimiento preventivo o cualquier <span> <a href="/servicios.php" class="text-decoration-none">servicio informático</a></span>, estoy aquí para ayudarte.
+                    Ya sea para una reparación, mantenimiento preventivo o cualquier <span> <a href="/servicios.php" class="text-decoration-none">servicio informático</a></span>, estamos aquí para ayudarte.
                 </p>
 
                 <div class="contact-details-wrapper">
@@ -80,7 +80,7 @@
                     </a>
 
                     <div class="mt-5">
-                        <p class="text-emphasis-contact fw-bold mb-3 text-center text-lg-start">Sígueme en redes para ver mis trabajos</p>
+                        <p class="text-emphasis-contact fw-bold mb-3 text-center text-lg-start">Síguenos en redes para ver nuestros trabajos</p>
                         <div class="d-flex gap-3 justify-content-center justify-content-lg-start">
                             <a href="https://www.instagram.com/me_techpy?igsh=MW1wZ2picW9xOHFmZg==" target="_blank" class="social-contact-link ig-color">
                                 <i class="fab fa-instagram"></i>

@@ -3,6 +3,7 @@
 <section class="hero-esencia py-5 bg-dark text-white text-center position-relative overflow-hidden">
     <div class="blob blob-1"></div>
     <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
 
     <div class="container py-5 position-relative" style="z-index: 2;">
         <h6 class="text-lila fw-bold text-uppercase mb-2 tracking-wider">Nuestra Esencia</h6>
@@ -10,9 +11,17 @@
         <p class="lead text-light-50 mx-auto" style="max-width: 750px;">
             ME-Tech nació con el objetivo de ofrecer soluciones informáticas eficientes, basadas en la experiencia, la responsabilidad y el trato cercano. Detrás del servicio hay técnicos comprometidos con hacer las cosas bien, priorizando siempre la transparencia y la calidad en cada trabajo.
         </p>
+
+        <div class="d-flex justify-content-center gap-3 flex-wrap mt-4">
+            <a href="#" class="btn-lila" data-bs-toggle="modal" data-bs-target="#modalSoporte">
+                <i class="fas fa-user-gear me-2"></i> SOLICITAR ASISTENCIA
+            </a>
+            <a href="/servicios.php" class="btn btn-outline-light rounded-pill px-4 py-2">
+                Nuestros Servicios
+            </a>
+        </div>
     </div>
 </section>
-
 <section class="py-5 bg-adaptive transition-bg position-relative">
     <div class="container py-4">
         <div class="text-center mb-5">
@@ -62,9 +71,19 @@
                 </div>
             </div>
         </div>
-        <a href="/servicios.php" class="btn btn-lila btn-lg rounded-pill mt-4">Nuestros Servicios</a>
+        <div class="mt-5">
+            <p class="text-emphasis-contact fw-bold mb-3 text-center text-lg-center">Síguenos en redes para ver nuestros trabajos</p>
+            <div class="d-flex gap-3 justify-content-center justify-content-lg-center">
+                <a href="https://www.instagram.com/me_techpy?igsh=MW1wZ2picW9xOHFmZg==" target="_blank" class="social-contact-link ig-color">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61587238919359" target="_blank" class="social-contact-link fb-color">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </div>
+        </div>
     </div>
 
 </section>
-
+<?php include 'includes/modal-soporte.php' ?>
 <?php include 'includes/footer.php' ?>

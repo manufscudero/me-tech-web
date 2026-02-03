@@ -1,0 +1,86 @@
+<div class="modal fade" id="modalSoporte" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content modal-custom border-lila">
+            <div class="modal-header border-0">
+                <h5 class="modal-title fw-bold text-white" id="modalTitle">¿Qué tipo de soporte necesitas?</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-4">
+                <div id="step1">
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <div class="card bg-opcion-dark border-secondary h-100 text-center p-3 option-card" onclick="showForm('Físico / Taller')">
+                                <div class="icon-circle mb-3"><i class="fas fa-user-gear fa-2x text-lila"></i></div>
+                                <h6 class="fw-bold text-white">Físico / Taller</h6>
+                                <small class="text-light-50">Reparación o mantenimiento en taller</small>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card bg-opcion-dark border-secondary h-100 text-center p-3 option-card" onclick="showForm('Remoto')">
+                                <div class="icon-circle mb-3"><i class="fas fa-laptop-house fa-2x text-lila"></i></div>
+                                <h6 class="fw-bold text-white">Remoto</h6>
+                                <small class="text-light-50">Solución online vía AnyDesk</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <form id="soporteForm" class="d-none p-2">
+                    <input type="hidden" id="tipoSeleccionado" name="tipo">
+
+                    <div class="mb-3 text-start">
+                        <label for="nombre" class="form-label text-white-50 small">Nombre Completo</label>
+                        <input type="text" class="form-control form-control-dark" id="nombre" required placeholder="Tu Nombre y Apellido">
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3 text-start">
+                            <label for="telefono" class="form-label text-white-50 small">Teléfono</label>
+                            <input type="tel" class="form-control form-control-dark" id="telefono" required placeholder="09xx xxx xxx">
+                        </div>
+                        <div class="col-md-6 mb-3 text-start">
+                            <label for="email" class="form-label text-white-50 small">Email (Opcional)</label>
+                            <input type="email" class="form-control form-control-dark" id="email" placeholder="correo@ejemplo.com">
+                        </div>
+                    </div>
+
+                    <div class="mb-4 text-start">
+                        <label for="problema" class="form-label text-white-50 small">Descripción del Problema</label>
+                        <textarea class="form-control form-control-dark" id="problema" rows="3" required placeholder="Describe qué le sucede a tu equipo..."></textarea>
+                    </div>
+
+                    <div class="d-flex gap-2">
+                        <button type="button" class="btn-lila w-40" onclick="hideForm()">
+                            <i class="fas fa-arrow-left me-2"></i>Volver
+                        </button>
+                        <button type="submit" class="btn-whatsapp-grad w-50">
+                            Registrar Solicitud <i class="fas fa-paper-plane ms-2"></i>
+                        </button>
+                    </div>
+                    <div class="mb-5">
+                        <div id="info-anydesk" class="mt-3 mb-4 d-none">
+                            <div class="p-4 rounded-3 border-4 border-lila bg-lila-subtle shadow-sm">
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="fas fa-desktop text-lila me-2 fs-5"></i>
+                                    <h6 class="mb-0 fw-bold text-emphasis">¿Qué es el Soporte Remoto?</h6>
+                                </div>
+                                <p class="mb-0 text-description">
+                                    Utilizamos <strong>AnyDesk</strong>, una herramienta segura que me permite ayudarte a través de internet.
+                                    Es como si estuviera ahí contigo: puedo ver tu pantalla y configurar tu equipo a distancia.
+                                </p>
+                                <hr class="my-2 opacity-25" style="border-color: var(--bs-body-color);">
+                                <small class="d-block fw-medium text-emphasis">
+                                    <i class="fas fa-shield-alt text-success me-1"></i>
+                                    Tú autorizas siempre la conexión y puedes ver todo lo que hago en tiempo real.
+                                    <a href="https://anydesk.com/es/downloads" target="_blank" rel="noopener noreferrer" class=" mt-3 btn-lila">
+                                        <i class="fas fa-external-link-alt me-2"></i> Ir a la descarga oficial de AnyDesk
+                                    </a>
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
