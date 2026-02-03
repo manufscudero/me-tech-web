@@ -23,3 +23,37 @@ Este proyecto ha sido desarrollado utilizando:
 - **Google Fonts** (Tipografía Poppins local).
 
 ---
+
+## COMO CLONAR EL REPOSITORIO
+## Requisitos
+- Git
+- Servidor local (XAMPP, WAMP o Laragon)
+- PHP 8 o superior
+
+1. Asegurate de tener **Git** instalado  
+
+2. Abrí una terminal (CMD, PowerShell, Git Bash o Terminal en Linux/Mac).
+
+3. Ejecutá el siguiente comando:
+
+```bash
+git clone https://github.com/manufscudero/me-tech-web.git
+
+## PARA MANDAR ACTUALIZACIONES AL MAIN BRANCH
+
+Verificá el estado de los archivos modificados:
+
+git status
+
+Agregá los cambios al staging:
+
+git add .
+
+Creá un commit con un mensaje descriptivo:
+
+git commit -m "Descripción breve de los cambios realizados"
+
+
+Enviá los cambios al branch main:
+
+git push origin main
