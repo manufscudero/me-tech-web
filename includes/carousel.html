@@ -1,0 +1,80 @@
+<header id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+	<div class="carousel-inner h-100">
+		<div class="carousel-item active h-100">
+			<div class="hero-slide-container" style="background-image: url('assets/img/header/hero.webp')">;
+				<div class="container h-100">
+					<div class="row h-100 align-items-center">
+						<div class="col-lg-7 hero-content">
+							<h1 class="display-4 fw-bold mb-4 text-white">Reparación y Mantenimiento <span class="text-lila">Profesional</span></h1>
+							<p class="lead mb-5 text-white-50">Especialistas en Hardware y Servicios Informáticos. Soporte técnico especializado para hogares y empresas con garantía real.</p>
+							<div class="d-flex gap-3 flex-wrap">
+								<a href="#" class="btn-lila" data-bs-toggle="modal" data-bs-target="#modalSoporte">
+									<i class="fas fa-user-gear me-2"></i> SOLICITAR ASISTENCIA
+								</a>
+								<a href="javascript:cargar('includes/servicios.html')" class="btn btn-outline-light btn-lg rounded-pill">Nuestros Servicios</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="carousel-item h-100">
+			<div class="hero-slide-container" style="background-image: url('assets/img/header/ps4.webp');">
+				<div class="container h-100">
+					<div class="row h-100 align-items-center">
+						<div class="col-lg-7 hero-content">
+							<h1 class="display-4 fw-bold mb-4 text-white">Mantenimiento Preventivo <span class="text-lila">PlayStation 4</span></h1>
+							<p class="lead mb-5 text-white-50">¿Tu consola suena como un avión? Evita sobrecalentamiento y daños en tu equipo con limpieza profunda y cambio de pasta térmica.</p>
+							<div class="d-flex gap-3 flex-wrap">
+								<a href="https://wa.me/595984608269?text=Hola! Necesito mantenimiento para mi PlayStation 4" class="btn-whatsapp-grad text-decoration-none">
+									<i class="fab fa-whatsapp me-2"></i>CONSULTAR PRESUPUESTO
+								</a>
+								<a href="javascript:cargar('includes/servicios.html')" class="btn btn-outline-light btn-lg rounded-pill">Ver más servicios</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="carousel-item h-100">
+			<div class="hero-slide-container" style="background-image: url('assets/img/header/remoto.webp');">
+				<div class="container h-100">
+					<div class="row h-100 align-items-center">
+						<div class="col-lg-7 hero-content">
+							<h1 class="display-4 fw-bold mb-4 text-white">Asistencia Técnica <span class="text-lila">Remota e Inmediata</span></h1>
+							<p class="lead mb-5 text-white-50">Solucionamos tus problemas de software sin que salgas de casa. Configuración de sistemas, optimización de sistema operativo y soporte especializado desde cualquier lugar.</p>
+							<div class="d-flex gap-3 flex-wrap">
+								<a href="#" class="btn-lila"
+									data-bs-toggle="modal"
+									data-bs-target="#modalSoporte"
+									onclick="showForm('Remoto')">
+									<i class="fas fa-house-laptop me-2"></i> SOLICITAR ASISTENCIA REMOTA
+								</a>
+								<a href="javascript:cargar('includes/servicios.html')" class="btn btn-outline-light btn-lg rounded-pill">Ver más servicios</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="carousel-indicators">
+			<button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+			<button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+			<button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+		</div>
+
+		<button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+			<span class="carousel-control-custom">
+				<i class="fas fa-chevron-left"></i>
+			</span>
+			<span class="visually-hidden">Anterior</span>
+		</button>
+		<button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+			<span class="carousel-control-custom">
+				<i class="fas fa-chevron-right"></i>
+			</span>
+			<span class="visually-hidden">Siguiente</span>
+		</button>
+	</div>
+</header>
